@@ -6,7 +6,8 @@
   "scripts": {
     "styles": "stylus -w css/home.styl",
     "es6": "babel -w js/source.js --out-file js/home.js",
-    "livereload": "livereload ./"
+    "livereload": "livereload ./",
+    "prefixer": "autoprefixer css/home.css"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/kartamyshev/css-preloaders",
   "devDependencies": {
+    "autoprefixer": "^5.1.0",
     "babel": "^5.0.8",
     "livereload": "^0.3.7",
     "stylus": "^0.50.0"

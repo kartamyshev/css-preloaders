@@ -7,8 +7,12 @@ body {
   margin: 0;
   padding: 0;
   background: #000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  transition: all 1s linear;
+  -webkit-transition: all 1s linear;
+          transition: all 1s linear;
 }
 body.body-adventurous-circles {
   background: #fff;
@@ -19,13 +23,17 @@ body.body-adventurous-circles {
   top: 20px;
   width: 150px;
   margin-left: -75px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 .btns .get-loader {
   background-color: transparent;
   border: 1px solid #f07444;
   color: #f07444;
-  transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+          transition: all 0.2s ease 0s;
   width: 150px;
   margin: 0 5px;
   height: 45px;
@@ -36,171 +44,120 @@ body.body-adventurous-circles {
   background-color: #f07444;
   color: #fff;
 }
-@-moz-keyframes horizontal-chunks {
-  from, to {
-    transform: scaleX(0);
-  }
-  90% {
-    transform: scaleX(1);
-  }
-}
 @-webkit-keyframes horizontal-chunks {
   from, to {
-    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
   90% {
-    transform: scaleX(1);
-  }
-}
-@-o-keyframes horizontal-chunks {
-  from, to {
-    transform: scaleX(0);
-  }
-  90% {
-    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 @keyframes horizontal-chunks {
   from, to {
-    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
   90% {
-    transform: scaleX(1);
-  }
-}
-@-moz-keyframes successively-circles {
-  from, to {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 @-webkit-keyframes successively-circles {
   from, to {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   50% {
-    transform: scale(1);
-  }
-}
-@-o-keyframes successively-circles {
-  from, to {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @keyframes successively-circles {
   from, to {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   50% {
-    transform: scale(1);
-  }
-}
-@-moz-keyframes adventurous-circle-sand {
-  from, to {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 @-webkit-keyframes adventurous-circle-sand {
   from, to {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   50% {
-    transform: scale(1.2);
-  }
-}
-@-o-keyframes adventurous-circle-sand {
-  from, to {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 @keyframes adventurous-circle-sand {
   from, to {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   50% {
-    transform: scale(1.2);
-  }
-}
-@-moz-keyframes adventurous-circle-goldenrod {
-  from, to {
-    transform: scale(0.3);
-  }
-  50% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 @-webkit-keyframes adventurous-circle-goldenrod {
   from, to {
-    transform: scale(0.3);
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
   }
   50% {
-    transform: scale(1.2);
-  }
-}
-@-o-keyframes adventurous-circle-goldenrod {
-  from, to {
-    transform: scale(0.3);
-  }
-  50% {
-    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 @keyframes adventurous-circle-goldenrod {
   from, to {
-    transform: scale(0.3);
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
   }
   50% {
-    transform: scale(1.2);
-  }
-}
-@-moz-keyframes adventurous-circle-orange {
-  from, to {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.3);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 @-webkit-keyframes adventurous-circle-orange {
   from, to {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   50% {
-    transform: scale(1.3);
-  }
-}
-@-o-keyframes adventurous-circle-orange {
-  from, to {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
   }
 }
 @keyframes adventurous-circle-orange {
   from, to {
-    transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   50% {
-    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
   }
 }
 .preloader {
   margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .preloader.horizontal-chunks {
   width: 150px;
@@ -208,25 +165,33 @@ body.body-adventurous-circles {
 }
 .preloader.horizontal-chunks span {
   background: #fff;
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
   width: 25px;
   height: 10px;
-  animation: horizontal-chunks 1.5s infinite forwards;
+  -webkit-animation: horizontal-chunks 1.5s infinite forwards;
+          animation: horizontal-chunks 1.5s infinite forwards;
 }
 .preloader.horizontal-chunks span:nth-child(1) {
-  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 .preloader.horizontal-chunks span:nth-child(2) {
-  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 .preloader.horizontal-chunks span:nth-child(3) {
-  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 .preloader.horizontal-chunks span:nth-child(4) {
-  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 .preloader.horizontal-chunks span:nth-child(5) {
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 .preloader.successively-circles > div {
   width: 15px;
@@ -234,22 +199,28 @@ body.body-adventurous-circles {
   background: rgba(255,255,255,0.7);
   border-radius: 50%;
   margin: 0 5px;
-  animation: successively-circles 3s infinite;
+  -webkit-animation: successively-circles 3s infinite;
+          animation: successively-circles 3s infinite;
 }
 .preloader.successively-circles > div:nth-child(1) {
-  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 .preloader.successively-circles > div:nth-child(2) {
-  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 .preloader.successively-circles > div:nth-child(3) {
-  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 .preloader.successively-circles > div:nth-child(4) {
-  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 .preloader.successively-circles > div:nth-child(5) {
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 .preloader.adventurous-circles {
   position: relative;
@@ -263,19 +234,25 @@ body.body-adventurous-circles {
   height: 50px;
   margin-top: -25px;
   border-radius: 50%;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .preloader.adventurous-circles .sand {
   background: #fc9;
-  animation: adventurous-circle-sand 4s linear infinite;
+  -webkit-animation: adventurous-circle-sand 4s linear infinite;
+          animation: adventurous-circle-sand 4s linear infinite;
 }
 .preloader.adventurous-circles .goldenrod {
   background: #000;
-  animation: adventurous-circle-goldenrod 4s ease-in-out infinite;
-  animation-delay: 1s;
+  -webkit-animation: adventurous-circle-goldenrod 4s ease-in-out infinite;
+          animation: adventurous-circle-goldenrod 4s ease-in-out infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 .preloader.adventurous-circles .orange {
   background: #f07444;
-  animation: adventurous-circle-orange 4s ease-in-out infinite;
-  animation-delay: 2s;
+  -webkit-animation: adventurous-circle-orange 4s ease-in-out infinite;
+          animation: adventurous-circle-orange 4s ease-in-out infinite;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
