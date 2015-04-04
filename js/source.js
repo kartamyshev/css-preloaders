@@ -19,7 +19,13 @@ var loaders = [
         `
     }, {
         name: 'circle',
-        html: ''
+        html: `
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        `
     }
 
 ];

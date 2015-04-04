@@ -1,0 +1,31 @@
+.preloader
+  margin: auto
+  display: flex
+  justify-content space-between
+  align-items center
+
+  &.horizontal-chunks
+    size = 150px
+    width: size
+    height: @width
+    span
+      background: #ffffff
+      transform scaleX(0)
+      width: (size / 6)
+      height: 10px
+      animation horizontal-chunks 1.5s infinite forwards
+      for i in (1..5)
+        &:nth-child({i})
+          animation-delay (i / 10)s
+
+  &.circle
+    > div
+      width: 15px
+      height: 15px
+      background: rgba(255, 255, 255, .7)
+      border-radius 50%
+      margin: 0 5px
+      animation circle 3s infinite
+      for i in (1..5)
+        &:nth-child({i})
+          animation-delay (i / 10)s

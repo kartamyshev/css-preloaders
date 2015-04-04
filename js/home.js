@@ -12,7 +12,7 @@ var loaders = [{
     html: '\n            <span>&nbsp;</span>\n            <span>&nbsp;</span>\n            <span>&nbsp;</span>\n            <span>&nbsp;</span>\n            <span>&nbsp;</span>\n        '
 }, {
     name: 'circle',
-    html: ''
+    html: '\n            <div></div>\n            <div></div>\n            <div></div>\n            <div></div>\n            <div></div>\n        '
 }];
 
 !(function setDefaultLoader() {
