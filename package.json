@@ -1,0 +1,30 @@
+{
+  "name": "css-preloaders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "styles": "stylus -w css/home.styl",
+    "es6": "babel -w js/source.js --out-file js/home.js",
+    "livereload": "livereload ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kartamyshev/css-preloaders.git"
+  },
+  "keywords": [
+    "css",
+    "preloaders"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kartamyshev/css-preloaders/issues"
+  },
+  "homepage": "https://github.com/kartamyshev/css-preloaders",
+  "devDependencies": {
+    "babel": "^5.0.8",
+    "livereload": "^0.3.7",
+    "stylus": "^0.50.0"
+  }
+}
