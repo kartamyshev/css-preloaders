@@ -51,7 +51,7 @@ var loaders = [
 ];
 
 !function setDefaultLoader() {
-    var rand = loaders.length - 1;
+    var rand = getRandomInt(0, loaders.length - 1);
     preloader.classList.add(loaders[rand].name);
     preloader.innerHTML = loaders[rand].html;
 
@@ -85,6 +85,5 @@ function chooseLoader() {
         });
     }
 }
-
 
 document.querySelector('.get-loader').addEventListener('click', chooseLoader, false);
