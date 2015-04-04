@@ -42,7 +42,7 @@ function chooseLoader() {
     });
 
     preloader.classList.add(classToAdd);
-    preloader.innerHTML = loaders[rand].layout;
+    preloader.innerHTML = loaders[rand].html;
 }
 
 

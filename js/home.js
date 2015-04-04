@@ -32,7 +32,7 @@ function chooseLoader() {
     });
 
     preloader.classList.add(classToAdd);
-    preloader.innerHTML = loaders[rand].layout;
+    preloader.innerHTML = loaders[rand].html;
 }
 
 document.querySelector('.get-loader').addEventListener('click', chooseLoader, false);
