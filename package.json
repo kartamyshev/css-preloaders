@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "styles": "stylus -w css/home.styl",
-    "es6": "babel -w js/source.js --out-file js/home.js",
+    "styles": "stylus -w --compress css/home.styl",
+    "es6": "babel -w js/source.js --compact --out-file js/home.js",
     "livereload": "livereload ./",
     "ap": "autoprefixer css/home.css"
   },
