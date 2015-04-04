@@ -45,6 +45,11 @@ var loaders = [
             <div></div>
             <div></div>
         `
+    }, {
+        name: 'filled-circle',
+        html: `
+            <div></div>
+        `
     }
 
 
@@ -52,6 +57,8 @@ var loaders = [
 
 !function setDefaultLoader() {
     var rand = getRandomInt(0, loaders.length - 1);
+    //var rand = loaders.length - 1;
+
     preloader.classList.add(loaders[rand].name);
     preloader.innerHTML = loaders[rand].html;
 
