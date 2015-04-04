@@ -14,7 +14,7 @@ body {
   -webkit-transition: all 1s linear;
           transition: all 1s linear;
 }
-body.body-adventurous-circles {
+body.b-adventurous-circles {
   background: #fff;
 }
 .btns {
@@ -32,8 +32,8 @@ body.body-adventurous-circles {
   background-color: transparent;
   border: 1px solid #f07444;
   color: #f07444;
-  -webkit-transition: all 0.2s ease 0s;
-          transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.8s ease 0s;
+          transition: all 0.8s ease 0s;
   width: 150px;
   margin: 0 5px;
   height: 45px;
@@ -43,6 +43,9 @@ body.body-adventurous-circles {
 .btns .get-loader:hover {
   background-color: #f07444;
   color: #fff;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 @-webkit-keyframes horizontal-chunks {
   from, to {

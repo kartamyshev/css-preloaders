@@ -34,8 +34,8 @@ var loaders = [
             <div class="orange"></div>
         `,
         extra: {
-            selector: document.body,
-            _class: 'body-adventurous-circles'
+            selectors: ['body', '.get-loader'],
+            _class: 'b-adventurous-circles'
         }
     }
 
@@ -47,7 +47,9 @@ var loaders = [
     preloader.innerHTML = loaders[rand].html;
 
     if ('extra' in loaders[rand]) {
-        loaders[rand].extra.selector.classList.add(loaders[rand].extra._class);
+        loaders[rand].extra.selectors.forEach((selector) => {
+            document.querySelector(selector).classList.add(loaders[rand].extra._class)
+        });
     }
 
 }();
@@ -69,7 +71,9 @@ function chooseLoader() {
     document.body.setAttribute('class', '');
 
     if ('extra' in loaders[rand]) {
-        loaders[rand].extra.selector.classList.add(loaders[rand].extra._class);
+        loaders[rand].extra.selectors.forEach((selector) => {
+            document.querySelector(selector).classList.add(loaders[rand].extra._class)
+        });
     }
 }
 

@@ -7,7 +7,7 @@
     "styles": "stylus -w css/home.styl",
     "es6": "babel -w js/source.js --out-file js/home.js",
     "livereload": "livereload ./",
-    "prefixer": "autoprefixer css/home.css"
+    "ap": "autoprefixer css/home.css"
   },
   "repository": {
     "type": "git",
