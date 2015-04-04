@@ -7,7 +7,8 @@
     "styles": "stylus -w --compress css/home.styl",
     "es6": "babel -w js/source.js --compact --out-file js/home.js",
     "livereload": "livereload ./",
-    "ap": "autoprefixer css/home.css"
+    "ap": "autoprefixer css/home.css",
+    "push": "git push origin gh-pages"
   },
   "repository": {
     "type": "git",
