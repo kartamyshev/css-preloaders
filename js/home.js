@@ -20,6 +20,9 @@ var loaders = [{
         selectors: ['body', '.get-loader'],
         _class: 'b-adventurous-circles'
     }
+}, {
+    name: 'running-line',
+    html: '\n            <div></div>\n            <div></div>\n            <div></div>\n            <div></div>\n        '
 }];
 
 !(function setDefaultLoader() {

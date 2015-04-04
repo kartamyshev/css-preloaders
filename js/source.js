@@ -37,12 +37,21 @@ var loaders = [
             selectors: ['body', '.get-loader'],
             _class: 'b-adventurous-circles'
         }
+    }, {
+        name: 'running-line',
+        html: `
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        `
     }
+
 
 ];
 
 !function setDefaultLoader() {
-    var rand = getRandomInt(0, loaders.length - 1);
+    var rand = loaders.length - 1;
     preloader.classList.add(loaders[rand].name);
     preloader.innerHTML = loaders[rand].html;
 

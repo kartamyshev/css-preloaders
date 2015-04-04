@@ -147,6 +147,134 @@ body.b-adventurous-circles {
             transform: scale(1.3);
   }
 }
+@-webkit-keyframes running-line-1 {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  65% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes running-line-1 {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  65% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@-webkit-keyframes running-line-2 {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  65% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes running-line-2 {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  65% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@-webkit-keyframes running-line-3 {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  65% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes running-line-3 {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  65% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@-webkit-keyframes running-line-4 {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  65% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+@keyframes running-line-4 {
+  from {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  65% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
 .preloader {
   margin: auto;
   display: -webkit-box;
@@ -258,4 +386,80 @@ body.b-adventurous-circles {
           animation: adventurous-circle-orange 4s ease-in-out infinite;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+}
+.preloader.running-line {
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+.preloader.running-line > div {
+  background: #fff;
+}
+.preloader.running-line > div:nth-child(1) {
+  -webkit-animation: running-line-1 2.5s linear infinite;
+          animation: running-line-1 2.5s linear infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  width: 100%;
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+  height: 1px;
+}
+.preloader.running-line > div:nth-child(2) {
+  -webkit-animation: running-line-2 2.5s linear infinite;
+          animation: running-line-2 2.5s linear infinite;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+          transform-origin: 0 0;
+  right: 0;
+}
+.preloader.running-line > div:nth-child(3) {
+  -webkit-animation: running-line-3 2.5s linear infinite;
+          animation: running-line-3 2.5s linear infinite;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  -webkit-transform-origin: 100% 0;
+      -ms-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+}
+.preloader.running-line > div:nth-child(4) {
+  -webkit-animation: running-line-4 2.5s linear infinite;
+          animation: running-line-4 2.5s linear infinite;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: -1px;
+  bottom: 0;
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%;
 }
