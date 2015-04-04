@@ -8,6 +8,10 @@ body {
   padding: 0;
   background: #000;
   display: flex;
+  transition: all 1s linear;
+}
+body.body-adventurous-circles {
+  background: #fff;
 }
 .btns {
   position: absolute;
@@ -64,7 +68,7 @@ body {
     transform: scaleX(1);
   }
 }
-@-moz-keyframes circle {
+@-moz-keyframes successively-circles {
   from, to {
     transform: scale(0);
   }
@@ -72,7 +76,7 @@ body {
     transform: scale(1);
   }
 }
-@-webkit-keyframes circle {
+@-webkit-keyframes successively-circles {
   from, to {
     transform: scale(0);
   }
@@ -80,7 +84,7 @@ body {
     transform: scale(1);
   }
 }
-@-o-keyframes circle {
+@-o-keyframes successively-circles {
   from, to {
     transform: scale(0);
   }
@@ -88,12 +92,108 @@ body {
     transform: scale(1);
   }
 }
-@keyframes circle {
+@keyframes successively-circles {
   from, to {
     transform: scale(0);
   }
   50% {
     transform: scale(1);
+  }
+}
+@-moz-keyframes adventurous-circle-sand {
+  from, to {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@-webkit-keyframes adventurous-circle-sand {
+  from, to {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@-o-keyframes adventurous-circle-sand {
+  from, to {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@keyframes adventurous-circle-sand {
+  from, to {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@-moz-keyframes adventurous-circle-goldenrod {
+  from, to {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@-webkit-keyframes adventurous-circle-goldenrod {
+  from, to {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@-o-keyframes adventurous-circle-goldenrod {
+  from, to {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@keyframes adventurous-circle-goldenrod {
+  from, to {
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+@-moz-keyframes adventurous-circle-orange {
+  from, to {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+@-webkit-keyframes adventurous-circle-orange {
+  from, to {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+@-o-keyframes adventurous-circle-orange {
+  from, to {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+@keyframes adventurous-circle-orange {
+  from, to {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.3);
   }
 }
 .preloader {
@@ -128,26 +228,54 @@ body {
 .preloader.horizontal-chunks span:nth-child(5) {
   animation-delay: 0.5s;
 }
-.preloader.circle > div {
+.preloader.successively-circles > div {
   width: 15px;
   height: 15px;
   background: rgba(255,255,255,0.7);
   border-radius: 50%;
   margin: 0 5px;
-  animation: circle 3s infinite;
+  animation: successively-circles 3s infinite;
 }
-.preloader.circle > div:nth-child(1) {
+.preloader.successively-circles > div:nth-child(1) {
   animation-delay: 0.1s;
 }
-.preloader.circle > div:nth-child(2) {
+.preloader.successively-circles > div:nth-child(2) {
   animation-delay: 0.2s;
 }
-.preloader.circle > div:nth-child(3) {
+.preloader.successively-circles > div:nth-child(3) {
   animation-delay: 0.3s;
 }
-.preloader.circle > div:nth-child(4) {
+.preloader.successively-circles > div:nth-child(4) {
   animation-delay: 0.4s;
 }
-.preloader.circle > div:nth-child(5) {
+.preloader.successively-circles > div:nth-child(5) {
   animation-delay: 0.5s;
+}
+.preloader.adventurous-circles {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+.preloader.adventurous-circles > div {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  border-radius: 50%;
+  animation-fill-mode: forwards;
+}
+.preloader.adventurous-circles .sand {
+  background: #fc9;
+  animation: adventurous-circle-sand 4s linear infinite;
+}
+.preloader.adventurous-circles .goldenrod {
+  background: #000;
+  animation: adventurous-circle-goldenrod 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+.preloader.adventurous-circles .orange {
+  background: #f07444;
+  animation: adventurous-circle-orange 4s ease-in-out infinite;
+  animation-delay: 2s;
 }

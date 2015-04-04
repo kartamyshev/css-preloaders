@@ -11,14 +11,25 @@ var loaders = [{
     name: 'horizontal-chunks',
     html: '\n            <span>&nbsp;</span>\n            <span>&nbsp;</span>\n            <span>&nbsp;</span>\n            <span>&nbsp;</span>\n            <span>&nbsp;</span>\n        '
 }, {
-    name: 'circle',
+    name: 'successively-circles',
     html: '\n            <div></div>\n            <div></div>\n            <div></div>\n            <div></div>\n            <div></div>\n        '
+}, {
+    name: 'adventurous-circles',
+    html: '\n            <div class="sand"></div>\n            <div class="goldenrod"></div>\n            <div class="orange"></div>\n        ',
+    extra: {
+        selector: document.body,
+        _class: 'body-adventurous-circles'
+    }
 }];
 
 !(function setDefaultLoader() {
     var rand = getRandomInt(0, loaders.length - 1);
     preloader.classList.add(loaders[rand].name);
     preloader.innerHTML = loaders[rand].html;
+
+    if ('extra' in loaders[rand]) {
+        loaders[rand].extra.selector.classList.add(loaders[rand].extra._class);
+    }
 })();
 
 function chooseLoader() {
@@ -33,6 +44,12 @@ function chooseLoader() {
 
     preloader.classList.add(classToAdd);
     preloader.innerHTML = loaders[rand].html;
+
+    document.body.setAttribute('class', '');
+
+    if ('extra' in loaders[rand]) {
+        loaders[rand].extra.selector.classList.add(loaders[rand].extra._class);
+    }
 }
 
 document.querySelector('.get-loader').addEventListener('click', chooseLoader, false);

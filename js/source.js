@@ -18,7 +18,7 @@ var loaders = [
             <span>&nbsp;</span>
         `
     }, {
-        name: 'circle',
+        name: 'successively-circles',
         html: `
             <div></div>
             <div></div>
@@ -26,6 +26,17 @@ var loaders = [
             <div></div>
             <div></div>
         `
+    }, {
+        name: 'adventurous-circles',
+        html: `
+            <div class="sand"></div>
+            <div class="goldenrod"></div>
+            <div class="orange"></div>
+        `,
+        extra: {
+            selector: document.body,
+            _class: 'body-adventurous-circles'
+        }
     }
 
 ];
@@ -34,6 +45,11 @@ var loaders = [
     var rand = getRandomInt(0, loaders.length - 1);
     preloader.classList.add(loaders[rand].name);
     preloader.innerHTML = loaders[rand].html;
+
+    if ('extra' in loaders[rand]) {
+        loaders[rand].extra.selector.classList.add(loaders[rand].extra._class);
+    }
+
 }();
 
 
@@ -49,6 +65,12 @@ function chooseLoader() {
 
     preloader.classList.add(classToAdd);
     preloader.innerHTML = loaders[rand].html;
+
+    document.body.setAttribute('class', '');
+
+    if ('extra' in loaders[rand]) {
+        loaders[rand].extra.selector.classList.add(loaders[rand].extra._class);
+    }
 }
 
 
