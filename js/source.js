@@ -1,51 +1,52 @@
-var loaders = [{
-    name: 'horizontal-chunks',
-    html: `
+var loaders = [
+    {
+        name: 'horizontal-chunks',
+        html: `
             <span>&nbsp;</span>
             <span>&nbsp;</span>
             <span>&nbsp;</span>
             <span>&nbsp;</span>
             <span>&nbsp;</span>
         `
-}, {
-    name: 'successively-circles',
-    html: `
+    }, {
+        name: 'successively-circles',
+        html: `
             <div></div>
             <div></div>
             <div></div>
             <div></div>
             <div></div>
         `
-}, {
-    name: 'adventurous-circles',
-    html: `
+    }, {
+        name: 'adventurous-circles',
+        html: `
             <div class="sand"></div>
             <div class="goldenrod"></div>
             <div class="orange"></div>
         `,
-    extra: {
-        selectors: ['body', '.get-loader'],
-        _class: 'b-adventurous-circles'
-    }
-}, {
-    name: 'running-line',
-    html: `
+        extra: {
+            selectors: ['body', '.get-loader'],
+            _class: 'b-adventurous-circles'
+        }
+    }, {
+        name: 'running-line',
+        html: `
             <div></div>
             <div></div>
             <div></div>
             <div></div>
         `
-}, {
-    name: 'filled-circle',
-    html: `
+    }, {
+        name: 'filled-circle',
+        html: `
             <div></div>
         `
-}, {
-    name: 'download-arrow',
-    html: `
+    }, {
+        name: 'download-arrow',
+        html: `
         <div></div>
     `
-}
+    }
 ];
 
 var preloader = document.querySelector('.preloader');
@@ -61,16 +62,17 @@ class Loader {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    static setLoader(which) {
+    static launchLoader(which) {
         preloader.classList.add(loaders[which].name);
         preloader.innerHTML = loaders[which].html;
+        location.hash = which;
     }
 
     setDefaultLoader() {
         var _static = this.constructor,
             rand = _static.getRandomInt(0, loaders.length - 1);
 
-        _static.setLoader(rand);
+        _static.launchLoader(rand);
 
         if ('extra' in loaders[rand]) {
             loaders[rand].extra.selectors.forEach((selector) => {
@@ -89,7 +91,7 @@ class Loader {
             }
         });
 
-        _static.setLoader(rand);
+        _static.launchLoader(rand);
 
         document.body.setAttribute('class', '');
 
@@ -103,6 +105,7 @@ class Loader {
 }
 
 var loader = new Loader();
+
 document.querySelector('.fork img').addEventListener('load', () => {
     document.querySelector('.fork').classList.add('fork_loaded');
 }, false);
