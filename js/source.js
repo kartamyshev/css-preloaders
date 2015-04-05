@@ -50,7 +50,6 @@ var loaders = [{
 
 var preloader = document.querySelector('.preloader');
 
-
 class Loader {
     constructor() {
         DOMTokenList.prototype.forEach = Array.prototype.forEach;
@@ -104,4 +103,7 @@ class Loader {
 }
 
 var loader = new Loader();
+document.querySelector('.fork img').addEventListener('load', () => {
+    document.querySelector('.fork').classList.add('fork_loaded');
+}, false);
 document.querySelector('.get-loader').addEventListener('click', loader.getLoader, false);
