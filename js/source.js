@@ -54,59 +54,55 @@ var preloader = document.querySelector('.preloader');
 class Loader {
     constructor() {
         DOMTokenList.prototype.forEach = Array.prototype.forEach;
-        this.getLoader = this.chooseLoader.bind(this);
-        this.setDefaultLoader();
+
+        this._public = {
+            setDefaultLoader: this.setDefaultLoader.bind(this),
+            chooseLoader: this.chooseLoader.bind(this)
+        };
     }
 
     static getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    static launchLoader(which) {
+    launchLoader(which) {
+        which = which || this.constructor.getRandomInt(0, loaders.length - 1);
+
         preloader.classList.add(loaders[which].name);
         preloader.innerHTML = loaders[which].html;
         location.hash = which;
+
+        if ('extra' in loaders[which]) {
+            loaders[which].extra.selectors.forEach((selector) => {
+                document.querySelector(selector).classList.add(loaders[which].extra._class)
+            });
+        }
+
+        return which;
     }
 
     setDefaultLoader() {
-        var _static = this.constructor,
-            rand = _static.getRandomInt(0, loaders.length - 1);
-
-        _static.launchLoader(rand);
-
-        if ('extra' in loaders[rand]) {
-            loaders[rand].extra.selectors.forEach((selector) => {
-                document.querySelector(selector).classList.add(loaders[rand].extra._class)
-            });
-        }
+        this.launchLoader();
     }
 
     chooseLoader() {
-        var _static = this.constructor,
-            rand = _static.getRandomInt(0, loaders.length - 1);
-
         preloader.classList.forEach(function (_class) {
             if (_class !== 'preloader') {
                 preloader.classList.remove(_class);
             }
         });
 
-        _static.launchLoader(rand);
-
         document.body.setAttribute('class', '');
-
-        if ('extra' in loaders[rand]) {
-            loaders[rand].extra.selectors.forEach((selector) => {
-                document.querySelector(selector).classList.add(loaders[rand].extra._class)
-            });
-        }
+        this.launchLoader();
     }
 
 }
 
 var loader = new Loader();
 
+document.addEventListener('DOMContentLoaded', loader._public.setDefaultLoader, false);
+
 document.querySelector('.fork img').addEventListener('load', () => {
     document.querySelector('.fork').classList.add('fork_loaded');
 }, false);
-document.querySelector('.get-loader').addEventListener('click', loader.getLoader, false);
+document.querySelector('.get-loader').addEventListener('click', loader._public.chooseLoader, false);
