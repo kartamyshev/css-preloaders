@@ -40,6 +40,11 @@ var loaders = [{
     html: `
             <div></div>
         `
+}, {
+    name: 'download-arrow',
+    html: `
+        <div></div>
+    `
 }
 ];
 
@@ -64,7 +69,7 @@ class Loader {
 
     setDefaultLoader() {
         var _static = this.constructor,
-            rand = _static.getRandomInt(0, loaders.length - 1);
+            rand = loaders.length - 1;
 
         _static.setLoader(rand);
 
