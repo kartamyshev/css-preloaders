@@ -3,7 +3,12 @@
   display flex
   justify-content space-between
   align-items center
-
+  transition transform .7s linear, opacity .7s linear
+  transform scale(1)
+  opacity: 1
+  &_minimized
+    transform scale(0)
+    opacity: 0
   &.horizontal-chunks
     size = 150px
     width size

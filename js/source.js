@@ -90,12 +90,18 @@ class Loader {
     }
 
     setDefaultLoader() {
+        preloader.classList.remove('preloader_minimized');
         this.launchLoader();
     }
 
     chooseLoader() {
-        this.constructor.resetPrevLoader();
-        this.launchLoader();
+        preloader.classList.add('preloader_minimized');
+        var timeout = setTimeout(() => {
+            this.constructor.resetPrevLoader();
+            this.launchLoader();
+            preloader.classList.remove('preloader_minimized');
+            clearTimeout(timeout);
+        }, 700);
     }
 
 }
