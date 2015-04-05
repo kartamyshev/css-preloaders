@@ -46,6 +46,15 @@ var loaders = [
         html: `
         <div></div>
     `
+    }, {
+        name: 'glass-line',
+        html: `
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        `
     }
 ];
 
