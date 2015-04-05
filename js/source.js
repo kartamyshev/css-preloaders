@@ -69,7 +69,7 @@ class Loader {
 
     setDefaultLoader() {
         var _static = this.constructor,
-            rand = loaders.length - 1;
+            rand = _static.getRandomInt(0, loaders.length - 1);
 
         _static.setLoader(rand);
 
