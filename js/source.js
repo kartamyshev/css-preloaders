@@ -65,9 +65,17 @@ class Loader {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    launchLoader(which) {
-        which = which || this.constructor.getRandomInt(0, loaders.length - 1);
+    static resetPrevLoader() {
+        preloader.classList.forEach(function (_class) {
+            if (_class !== 'preloader') {
+                preloader.classList.remove(_class);
+            }
+        });
 
+        document.body.setAttribute('class', '');
+    }
+
+    launchLoader(which = this.constructor.getRandomInt(0, loaders.length - 1)) {
         preloader.classList.add(loaders[which].name);
         preloader.innerHTML = loaders[which].html;
         location.hash = which;
@@ -86,13 +94,7 @@ class Loader {
     }
 
     chooseLoader() {
-        preloader.classList.forEach(function (_class) {
-            if (_class !== 'preloader') {
-                preloader.classList.remove(_class);
-            }
-        });
-
-        document.body.setAttribute('class', '');
+        this.constructor.resetPrevLoader();
         this.launchLoader();
     }
 
