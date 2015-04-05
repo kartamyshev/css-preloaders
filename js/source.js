@@ -75,7 +75,7 @@ class Loader {
     }
 
     static resetPrevLoader() {
-        preloader.classList.forEach(function (_class) {
+        preloader.classList.forEach((_class) => {
             if (_class !== 'preloader') {
                 preloader.classList.remove(_class);
             }
