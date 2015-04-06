@@ -55,6 +55,19 @@ var loaders = [
             <div></div>
             <div></div>
         `
+    }, {
+        name: 'falling-numbers',
+        html: `
+            <div class="percent-20">20%</div>
+            <div class="percent-40">40%</div>
+            <div class="percent-60">60%</div>
+            <div class="percent-80">80%</div>
+            <div class="percent-100">100%</div>
+        `,
+        extra: {
+            selectors: ['body'],
+            _class: 'b-falling-numbers'
+        }
     }
 ];
 
@@ -84,18 +97,18 @@ class Loader {
         document.body.setAttribute('class', '');
     }
 
-    launchLoader(which = this.constructor.getRandomInt(0, loaders.length - 1)) {
-        preloader.classList.add(loaders[which].name);
-        preloader.innerHTML = loaders[which].html;
-        location.hash = which;
+    launchLoader(index = loaders.length - 1) {
+        preloader.classList.add(loaders[index].name);
+        preloader.innerHTML = loaders[index].html;
+        location.hash = index;
 
-        if ('extra' in loaders[which]) {
-            loaders[which].extra.selectors.forEach((selector) => {
-                document.querySelector(selector).classList.add(loaders[which].extra._class)
+        if ('extra' in loaders[index]) {
+            loaders[index].extra.selectors.forEach((selector) => {
+                document.querySelector(selector).classList.add(loaders[index].extra._class)
             });
         }
 
-        return which;
+        return index;
     }
 
     setDefaultLoader() {
