@@ -97,7 +97,7 @@ class Loader {
         document.body.setAttribute('class', '');
     }
 
-    launchLoader(index = loaders.length - 1) {
+    launchLoader(index = this.constructor.getRandomInt(0, loaders.length - 1)) {
         preloader.classList.add(loaders[index].name);
         preloader.innerHTML = loaders[index].html;
         location.hash = index;
