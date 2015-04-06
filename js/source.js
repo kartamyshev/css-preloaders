@@ -44,8 +44,8 @@ var loaders = [
     }, {
         name: 'download-arrow',
         html: `
-        <div></div>
-    `
+            <div></div>
+        `
     }, {
         name: 'glass-line',
         html: `
